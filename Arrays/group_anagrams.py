@@ -1,10 +1,13 @@
-class solution:
-    
-    def group_anagrams(self, strs):
-        anagrams = {}
-        for s in strs:
-            sorted_s = ''.join(sorted(s))
-            if sorted_s not in anagrams:
-                anagrams[sorted_s] = []
-            anagrams[sorted_s].append(s)
-        return list(anagrams.values())
+class Solution:
+    def groupAnagrams(self, strs):
+        groups = {}
+
+        for word in strs:
+            key = ''.join(sorted(word))
+
+            if key not in groups:
+                groups[key] = []
+
+            groups[key].append(word)
+
+        return list(groups.values())
