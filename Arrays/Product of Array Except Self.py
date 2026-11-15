@@ -1,7 +1,6 @@
 class Solution:
     def productExceptSelf(self, nums):
         n = len(nums)
-
         result = [1] * n
 
         prefix = 1
@@ -17,3 +16,11 @@ class Solution:
             suffix *= nums[i]
 
         return result
+
+
+nums = list(map(int, input("Enter array elements: ").split()))
+
+obj = Solution()
+result = obj.productExceptSelf(nums)
+
+print("Product Except Self:", result)
