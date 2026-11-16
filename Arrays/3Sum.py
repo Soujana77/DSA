@@ -1,5 +1,6 @@
 class Solution:
     def threeSum(self, nums):
+
         nums.sort()
         result = []
 
@@ -12,6 +13,7 @@ class Solution:
             right = len(nums) - 1
 
             while left < right:
+
                 total = nums[i] + nums[left] + nums[right]
 
                 if total == 0:
@@ -33,3 +35,9 @@ class Solution:
                     right -= 1
 
         return result
+nums = list(map(int,input("Enter array elements: ").split()))       
+obj = Solution()
+result = obj.threeSum(nums)
+print("Triplets that sum to zero:", result)
+
+    
